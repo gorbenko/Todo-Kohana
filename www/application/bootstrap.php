@@ -123,7 +123,9 @@ Kohana::modules(array(
  * defaults for the URI.
  */
 
-Route::set('task', 'task(/<action>(/<id>))')
+
+
+Route::set('tasks', 'tasks(/<date>)', array('date' => '\d\d.\d\d.\d\d\d\d'))
 	->defaults(array(
 		'controller' => 'task',
 		'action'     => 'list',

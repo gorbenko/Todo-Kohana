@@ -12,16 +12,15 @@ class Controller_Task extends Controller {
             foreach($tasks as $task) {
                 $out .= View::factory('task', $task->as_array());
             }
+            $out = View::factory('tasks', array('tasks' => $out));
         } else {
-            $task = ORM::factory('task')->where('date_start', '=', $this->datetotime($date))->find();
-            $out = View::factory('task', $task->as_array());
+            $tasks = ORM::factory('task')->where('date_start', '=', $this->datetotime($date))->find();
+            if ($tasks->loaded() > 0)
+                $out = View::factory('tasks', array('tasks' => View::factory('task', $tasks->as_array())));
+            else
+                $out = View::factory('task404', array('date' => $date));
         }
         echo $out;
-    }
-
-    protected function datetotime($str)
-    {
-        return strtotime(str_replace(".", "-", $str));
     }
 
     public function action_add()
@@ -53,5 +52,10 @@ class Controller_Task extends Controller {
         } else {
             echo json_encode(array('success' => false));
         }
+    }
+
+    protected function datetotime($str)
+    {
+        return strtotime(str_replace(".", "-", $str));
     }
 }

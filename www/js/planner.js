@@ -1,15 +1,35 @@
 $(function(){
-    $.datepicker.setDefaults({ dateFormat: 'dd.mm.yy' });
+
+    $(document).ajaxStart(function() {
+        $('#task-body').html($('#load').html());
+    });
+
+    $.datepicker.setDefaults({ dateFormat: 'dd.mm.yy' }, $.datepicker.regional[ "ru" ]);
 
     $('.calendar').datepicker({
         numberOfMonths: 2,
-        showButtonPanel: true,
-        altField: "#date-for-head-list"
+//        showButtonPanel: true,
+        altField: "#date-for-head-list",
+        onSelect : function(date) {
+            updateTaskList(date);
+        }
+//        gotoCurrent: true
     });
 
-    $('#date-for-head-list, #date_start, #date_end, #date_finish').datepicker();
+    $('#date-for-head-list').datepicker({
+        onSelect : function(date) {
+            updateTaskList(date);
+        }
+    }).mask("99.99.9999");;
+
+    $('#show-all').click(function(){
+        updateTaskList();
+    });
+
+    $('#date_start, #date_end, #date_finish').datepicker({minDate: "D"}).mask("99.99.9999");;
 
     $('.button-dialog-add').click(function(){
+        $('#date_start, #date_end, #date_finish, #desc').val('');
         $('.add-dialog').dialog({
             modal: true,
             width: 540,
@@ -39,14 +59,6 @@ $(function(){
         return false;
     });
 
-    function updateTaskList() {
-        $.ajax({
-            url: "/task"
-        }).done(function(data) {
-            $('#task-list-body').html(data);
-        });
-    };
-
     $('.action-delete').live('click', function(){
        if (!confirm("Вы уверены?")) return;
         var id = $(this).data('id');
@@ -62,6 +74,19 @@ $(function(){
         });
     });
 
+    function updateTaskList(date) {
+        var url = "/tasks";
+
+        if (typeof date != "undefined")
+            url += "/" + date;
+
+        $.ajax({
+            url: url
+        }).done(function(data) {
+            $('#task-body').html(data);
+        });
+    };
+
     updateTaskList();
 
-})
+});
