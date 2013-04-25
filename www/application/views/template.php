@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Планировщик задач</title>
+    <?php
+        $config = Kohana::$config->load('site');
+    ?>
+    <title><?= $config->get('title') ?></title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/planner/stylesheets/screen.css">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css">
@@ -27,13 +30,15 @@
 </div>
 
 <div class="add-dialog none" title="Новая задача">
+    <input type="text" style="position:absolute;top:-500px;">
+    <input type="hidden" id="id">
     <label for="date_start">Дата начала <span class="hint" title="Дата начала работы над задачей">[?]</span>:</label>
     <input id="date_start" type="text"><br>
     <label for="date_end">Дата завершения <span class="hint" title="Крайний срок выполнения задачи">[?]</span>:</label>
     <input id="date_end" type="text"><br>
     <label for="date_finish">Дата выполнения <span class="hint" title="Дата выполнения задачи">[?]</span>:</label>
     <input id="date_finish" type="text"><br>
-    <textarea maxlength="1000" id="desc" placeholder="Описание задачи"></textarea>
+    <textarea maxlength="1000" id="description" placeholder="Описание задачи"></textarea>
 </div>
 
 <script type="text/template" id="load">

@@ -115,6 +115,7 @@ body {
   padding: 6px;
   border: $border_td;
   background-color: $bg_td;
+  cursor: pointer;
 }
 
 .action {
@@ -132,7 +133,12 @@ body {
   background-image: url(../img/delete.png);
 }
 
+.tr_task:hover td {
+  background-color: #eee;
+}
+
 .td_action {
+  width: 40px;
   text-align: center;
 }
 

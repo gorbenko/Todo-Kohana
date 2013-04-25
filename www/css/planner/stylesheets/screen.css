@@ -67,23 +67,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 12, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 12, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 body, html {
   height: 100%;
 }
 
-/* line 15, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 15, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 body {
   font: 14px/1.1em Arial, sans;
   background-color: #969696;
 }
 
-/* line 20, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 20, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .main {
   width: 100%;
 }
 
-/* line 24, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 24, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .content {
   width: 640px;
   height: 100%;
@@ -98,35 +98,35 @@ body {
   border-radius: 0px 0px 4px 4px;
 }
 
-/* line 34, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 34, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .calendar {
   padding-bottom: 10px;
 }
 
-/* line 38, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 38, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .calendar > .ui-datepicker {
   margin: 0 auto;
 }
 
-/* line 42, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 42, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .hint {
   font-size: 12px;
   color: #00008b;
 }
 
-/* line 47, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 47, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .add-dialog input {
   width: 200px;
 }
 
-/* line 51, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 51, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .add-dialog label {
   width: 190px;
   display: inline-block;
   margin-bottom: 10px;
 }
 
-/* line 57, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 57, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .add-dialog textarea {
   margin-top: 10px;
   width: 100%;
@@ -135,7 +135,7 @@ body {
   box-sizing: border-box;
 }
 
-/* line 65, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 65, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .button {
   background-color: #eee;
   padding: 8px 18px;
@@ -150,17 +150,17 @@ body {
   display: inline-block;
 }
 
-/* line 75, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 75, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 #date-for-head-list {
   padding: 1px 2px;
 }
 
-/* line 79, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 79, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .none {
   display: none;
 }
 
-/* line 83, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 83, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .add-panel {
   border: 1px inset;
   padding: 20px 0;
@@ -169,25 +169,25 @@ body {
   text-align: center;
 }
 
-/* line 91, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 91, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .task-list {
   padding: 20px 0;
 }
 
-/* line 95, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 95, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .task-list-head {
   font-weight: normal;
   text-shadow: 1px 1px 1px #fff;
   display: inline-block;
 }
 
-/* line 101, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 101, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .task-list-table {
   width: 100%;
   margin-top: 14px;
 }
 
-/* line 106, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 106, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .task-list-table th {
   text-align: left;
   font-weight: normal;
@@ -196,14 +196,15 @@ body {
   border: 1px solid gray;
 }
 
-/* line 114, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 114, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .task-list-table td {
   padding: 6px;
   border: 1px solid gray;
   background-color: white;
+  cursor: pointer;
 }
 
-/* line 120, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 121, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .action {
   display: inline-block;
   width: 16px;
@@ -211,22 +212,28 @@ body {
   cursor: pointer;
 }
 
-/* line 127, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 128, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .action-edit {
   background-image: url(../img/edit.png);
 }
 
-/* line 131, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 132, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .action-delete {
   background-image: url(../img/delete.png);
 }
 
-/* line 135, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 136, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+.tr_task:hover td {
+  background-color: #eee;
+}
+
+/* line 140, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .td_action {
+  width: 40px;
   text-align: center;
 }
 
-/* line 139, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 145, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .pseudolink {
   color: gray;
   border-bottom: 1px dashed gray;
@@ -234,7 +241,7 @@ body {
   cursor: pointer;
 }
 
-/* line 146, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 152, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .load {
   width: 16px;
   height: 11px;
@@ -242,7 +249,7 @@ body {
   margin: 30px auto 0;
 }
 
-/* line 153, C:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
+/* line 159, c:/WebServers/home/Todo-Kohana/www/css/planner/sass/screen.scss */
 .task-body-inner {
   border: 1px solid gray;
   background-color: white;
