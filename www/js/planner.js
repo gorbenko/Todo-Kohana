@@ -7,13 +7,10 @@ $(function(){
     $.datepicker.setDefaults({ dateFormat: 'dd.mm.yy' }, $.datepicker.regional[ "ru" ]);
 
     $('.calendar').datepicker({
-        numberOfMonths: 2,
-//        showButtonPanel: true,
         altField: "#date-for-head-list",
         onSelect : function(date) {
             updateTaskList(date);
         }
-//        gotoCurrent: true
     });
 
     $('#date-for-head-list').datepicker({
